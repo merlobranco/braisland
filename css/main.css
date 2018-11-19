@@ -1,0 +1,670 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== ScrollMagic Class ==============================================
+   Author: Petr Tichy - ihatetomatoes.net
+   ========================================================================== */
+
+
+body {
+    font: 16px/1.5 Helvetica, Helvetica Neue, Arial;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* =Main */
+#intro,
+#outro {
+    height: 100vh;
+    background: radial-gradient(circle, #74A6EE 0%, #485CB2 100%);
+    text-align: center;
+    color: #fff;
+    position: relative; /* It's position relative cause the content inside is position absolute */
+}
+#intro {
+    position: relative;
+    background: linear-gradient(to bottom, #012744 0%, #0D4673 50%,#C4E4EF 100%); color: #fff;
+    height: 200vh;
+}
+#intro .content,
+#outro .content,
+.section-horizontal .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#intro .section-stars {
+    position: relative;
+    top: 0;
+    height: 200vh;
+    background: url("../img/img_stars.png") repeat 0 0;
+}
+#intro .content{
+    top: 25%;
+}
+.boardingPasses.back {
+    width: 865px;
+    height: 586px;
+    background: url('../img/boarding_passes/img_boardingPassBack.png') no-repeat 0 0;
+    background-size: 865px 586px;
+    transform: translate(11%, 44%);
+}
+.boardingPasses.front {
+    width: 797px;
+    height: 381px;
+    background: url('../img/boarding_passes/img_boardingPassFront.png') no-repeat 0 0;
+    background-size: 797px 381px;
+    transform: translate(5%, -50%);
+}
+.boardingPasses.airplane {
+    width: 368px;
+    height: 140px;
+    background: url('../img/boarding_passes/img_airplane.png') no-repeat 0 0;
+    background-size: 368px 140px;
+    transform: translate(46%, -357%);
+}
+.boardingPasses.welcome {
+    width: 777px;
+    height: 161px;
+    background: url('../img/boarding_passes/img_welcome.png') no-repeat 0 0;
+    background-size: 777px 161px;
+    transform: translate(7%, -169%);
+}
+.boardingPasses.message {
+    transform: translate(-1%, -604%);
+}
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+p {
+    font-size: 18px;
+}
+
+$panelcount: 5; // set # of panels/sections here
+
+#main {
+    overflow: hidden;
+}
+
+.horizontal-container {
+    width: 500%; /* Important for allowing us scrolling horizontally */
+    height: 100vh;
+    position: relative; /* It's position relative cause the content inside is position absolute */
+}
+.section-horizontal {
+    width: 20%; /* 1/5 of the width of the parent container */
+    height: 100%; /* 100% of the height of the parent container */
+}
+.section-clouds {
+    position: relative;
+    top: 0;
+    height: 100%;
+    background: url("../img/img_clouds.png") repeat-x 0 0, linear-gradient(to bottom, #C4E4EF 73%, #C4E4EF 74%, #71B649 75%, #219B48 100%);
+}
+.section-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 20%;
+    bottom: 0;
+}
+.section-2 {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 40%;
+    bottom: 0;
+}
+.section-3 {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    right: 60%;
+    bottom: 0;
+}
+.section-4 {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    right: 80%;
+    bottom: 0;
+}
+.section-5 {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    right: 100%;
+    bottom: 0;
+}
+.section-4 {background-color: #98DBE1; color: #fff}
+.section-5 {background: radial-gradient(circle, #786254 0%, #000000 100%);}
+
+.persian, .mayan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+.treeLeft,
+.treeLeft02 {
+    width: 600px;
+    height: 857px;
+    background: url('../img/vegetation/img_tree-left.png') no-repeat 0 0;
+    background-size: 600px 857px;
+    margin: -430px 0 0 -1104px;
+}
+.treeLeft02 {
+    margin: -370px 0 0 -1254px;
+}
+.treeRight,
+.treeRight02 {
+    width: 719px;
+    height: 899px;
+    background: url('../img/vegetation/img_tree-right.png') no-repeat 0 0;
+    background-size: 719px 899px;
+    margin: -460px 0 0 490px;
+}
+.treeRight02 {
+    margin: -460px 0 0 540px;
+}
+.throne {
+    width: 721px;
+    height: 1048px;
+    margin: -440px 0 0 -377px;
+    z-index: 6;
+}
+.setarPlayer {
+    width: 333px;
+    height: 416px;
+    margin: 75px 0 0 -780px;
+}
+.dafPlayer {
+    width: 379px;
+    height: 448px;
+    margin: 20px 0 0 -380px;
+}
+.dancer {
+    width: 319px;
+    height: 606px;
+    margin: -70px 0 0 70px;
+    z-index: 5;
+}
+.kamanchehPlayer {
+    width: 316px;
+    height: 450px;
+    margin: 60px 0 0 470px;
+    z-index: 5;
+}
+.bird01 {
+    width: 91px;
+    height: 86px;
+    margin: -570px 0 0 210px;
+    z-index: 7;
+}
+.bird02 {
+    width: 101px;
+    height: 91px;
+    margin: -370px 0 0 -1380px;
+    z-index: 7;
+}
+.bird02b {
+    width: 110px;
+    height: 126px;
+    margin: -35px 0 0 1275px;
+    z-index: 7;
+}
+.bird03 {
+    width: 103px;
+    height: 77px;
+    margin: -35px 0 0 1275px;
+    z-index: 5;
+}
+.flower01, .flower02, .flower03, .flower04, .cocoon01, .leaf01,
+.flower01b, .flower02b, .flower03b, .flower04b, .cocoon01b, .leaf01b {
+    width: 51px;
+    height: 38px;
+    margin: 10px 0 0 -1060px;
+    z-index: 2;
+}
+.flower01b {
+    margin: 5px 0 0 855px;
+}
+.flower02, .flower02b {
+    width: 62px;
+    height: 38px;
+    margin: -10px 0 0 810px;
+}
+.flower03, .flower03b {
+    width: 72px;
+    height: 41px;
+    margin: 20px 0 0 -1040px;
+}
+.flower03b {
+    margin: -10px 0 0 -990px;
+}
+.flower04, .flower04b {
+    width: 29px;
+    height: 29px;
+    margin: 10px 0 0 -990px;
+}
+.flower04b {
+    margin: -35px 0 0 825px;
+}
+.cocoon01, .cocoon01b {
+    width: 37px;
+    height: 35px;
+    margin: -35px 0 0 835px;
+}
+.cocoon01b {
+    margin: -35px 0 0 -965px;
+}
+.leaf01, .leaf01b {
+    width: 23px;
+    height: 18px;
+    margin: 15px 0 0 850px;
+}
+.leaf01b {
+    margin: 15px 0 0 -950px;
+}
+.note {
+    z-index: 8;
+    margin: -20px 0 0 -710px;
+    opacity: 0;
+}
+.note01, .note11, .note15, .note21, .note25 {
+    width: 22px;
+    height: 59px;
+}
+.note02, .note12, .note16, .note22, .note26 {
+    width: 33px;
+    height: 42px;
+}
+.note03, .note13, .note17, .note23, .note27 {
+    width: 23px;
+    height: 38px;
+}
+.note04, .note14, .note24 {
+    width: 34px;
+    height: 42px;
+}
+.note11, .note12, .note13, .note14,
+.note15, .note16, .note17 {
+    margin: -50px 0 0 -330px;
+}
+.note21, .note22, .note23, .note24,
+.note25, .note26, .note27 {
+    margin: -50px 0 0 550px;
+}
+.pitzWall {
+    width: 2423px;
+    height: 985px;
+    background: url('../img/structures/img_pitz-wall.png') no-repeat 0 0;
+    background-size: 2423px 985px;
+    margin: -470px 0 0 -1210px;
+    z-index: 2;
+}
+.backRing, .frontRing {
+    width: 190px;
+    height: 238px;
+    background: url('../img/structures/img_back-ring.png') no-repeat 0 0;
+    background-size: 190px 238px;
+    margin: -490px 0 0 -260px;
+    z-index: 3;
+}
+.frontRing {
+    background: url('../img/structures/img_front-ring.png') no-repeat 0 0;
+    z-index: 5;
+}
+.pitzWallPiece01 {
+    width: 361px;
+    height: 265px;
+    margin: -455px 0 0 155px;
+    z-index: 3;
+}
+.pitzWallPiece02 {
+    width: 401px;
+    height: 264px;
+    margin: -432px 0 0 333px;
+    z-index: 3;
+}
+.pitzWallPiece03 {
+    width: 236px;
+    height: 215px;
+    margin: -359px 0 0 611px;
+    z-index: 3;
+}
+.pitzWallPiece04 {
+    width: 182px;
+    height: 220px;
+    margin: -227px 0 0 155px;
+    z-index: 3;
+}
+.pitzWallPiece05 {
+    width: 350px;
+    height: 242px;
+    margin: -211px 0 0 334px;
+    z-index: 3;
+}
+.pitzWallPiece06 {
+    width: 264px;
+    height: 212px;
+    margin: -159px 0 0 617px;
+    z-index: 3;
+}
+.pitzWallPiece07 {
+    width: 365px;
+    height: 114px;
+    margin: -21px 0 0 155px;
+    z-index: 3;
+}
+.pitzWallPiece08 {
+    width: 389px;
+    height: 145px;
+    margin: 9px 0 0 495px;
+    z-index: 3;
+}
+.pitzBall {
+    width: 86px;
+    height: 85px;
+    margin: -380px 0 0 -600px;
+    z-index: 4;
+}
+.jumpingPlayer {
+    width: 415px;
+    height: 700px;
+    margin: -435px 0 0 -1030px;
+    z-index: 4;
+}
+.standingPlayer {
+    width: 484px;
+    height: 558px;
+    margin: -75px 0 0 690px;
+    z-index: 4;
+}
+.backPlayer {
+    width: 381px;
+    height: 569px;
+    margin: 0 0 0 -650px;
+    z-index: 4;
+}
+.kneeledPlayer {
+    width: 332px;
+    height: 483px;
+    margin: 80px 0 0 160px;
+    z-index: 4;
+}
+
+.message01, 
+.message01b,
+.message02 {
+    position: absolute;
+    background: #FFFFFF;
+    color: #AAAAAA;
+    width: 900px;
+    height: 510px;
+    font-family: 'Lato', sans-serif;
+    margin: -510px 0 0 250px;
+    z-index: 4;
+}
+.message01b {
+    z-index: 3;
+}
+.message02 {
+    width: 880px;
+    height: 500px;
+    margin: -520px 0 0 -320px
+}
+.message01::before,
+.message01b::before,
+.message02::before {
+    content: '';
+    width: 100%;
+    height: 8px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    background: url('../img/paper.png') repeat-x center;
+}
+.message01::after,
+.message01b::after,
+.message02::after {
+    content: '';
+    width: 100%;
+    height: 8px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: url('../img/paper_bottom.png') repeat-x center;
+}
+.message01 h2,
+.message02 h2 {
+    margin-top: 1.5em;
+}
+.message01 p,
+.message02 p {
+    margin-left: 1em;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+    /* =General */
+
+    /* =Header */
+
+    /* =Footer */
+}
+
+@media only screen and (min-width: 768px) {
+    /* =General */
+
+    /* =Header */
+
+    /* =Footer */
+}
+
+@media only screen and (min-width: 1140px) {
+    /* =General */
+
+    /* =Header */
+
+    /* =Footer */
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
